@@ -1,0 +1,7 @@
+li {
+    text-transform: capitalize;
+}
+
+::ng-deep .ant-layout-header {
+    padding: 0 !important;
+}

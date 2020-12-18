@@ -1,0 +1,7 @@
+<ul nz-menu nzMode="horizontal">
+    <li nz-menu-item *ngFor="let item of navBarItem;let ind=index" [href]="item?.routerLink" routerLinkActive="nzSelected">
+        {{item?.label}}</li>
+    <li nz-menu-item routerLink="/auth">
+        <i nz-icon nzType="logout" nzTheme="outline"></i> выход
+    </li>
+</ul>
