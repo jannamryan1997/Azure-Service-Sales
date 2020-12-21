@@ -1,0 +1,28 @@
+<div class="users">
+    <header>
+        <p class="header-title">Управление Пользователями</p>
+        <div class="header-content">
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" nz-input placeholder="Поиск по подпискам" />
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+                <i nz-icon nzType="search"></i>
+            </ng-template>
+
+            <button nz-button nzType="primary" (click)="showModal()">Создать Пользователя</button>
+        </div>
+    </header>
+
+    <nz-list nzBordered nzHeader="Список имен пользователей">
+        <nz-list-item>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+            <p>ООО рога и копыта</p>
+        </nz-list-item>
+    </nz-list>
+</div>

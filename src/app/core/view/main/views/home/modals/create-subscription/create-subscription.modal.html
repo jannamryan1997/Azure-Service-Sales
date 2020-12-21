@@ -1,0 +1,122 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your phone!">
+            <nz-input-group nzPrefixIcon="phone">
+                <input type="text" nz-input formControlName="phone" placeholder="номера подписки" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+        <a nz-dropdown [nzDropdownMenu]="menu">
+                вендор
+    <i nz-icon nzType="down"></i>
+  </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzSelectable>
+                <li nz-menu-item>1st menu item</li>
+                <li nz-menu-item>2nd menu item</li>
+                <li nz-menu-item>3rd menu item</li>
+            </ul>
+        </nz-dropdown-menu>
+    </nz-form-item>
+    <nz-form-item>
+        <a nz-dropdown [nzDropdownMenu]="menu">
+            продукт
+    <i nz-icon nzType="down"></i>
+  </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzSelectable>
+                <li nz-menu-item>1st menu item</li>
+                <li nz-menu-item>2nd menu item</li>
+                <li nz-menu-item>3rd menu item</li>
+            </ul>
+        </nz-dropdown-menu>
+    </nz-form-item>
+
+    <div nz-row [nzGutter]="1">
+        <div nz-col class="gutter-row" [nzSpan]="8">
+
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your quantity!">
+                    <nz-input-group>
+                        <input type="text " nz-input placeholder="количество" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col class="gutter-row" [nzSpan]="8">
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your unit cost!">
+                    <nz-input-group>
+                        <input type="text" nz-input placeholder="стоимости за единицу" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col class="gutter-row" [nzSpan]="8">
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input sum!">
+                    <nz-input-group>
+                        <input type="text" nz-input placeholder="сумма" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+    </div>
+
+    <div nz-row class="date-picker">
+        <div nz-col nzSpan="8">
+            <nz-date-picker placeholder="с"></nz-date-picker>
+        </div>
+        <div nz-col nzSpan="8" nzOffset="8">
+            <nz-date-picker placeholder="по"></nz-date-picker>
+        </div>
+    </div>
+
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your phone!">
+            <nz-input-group>
+                <a nz-dropdown [nzDropdownMenu]="menu">
+                    пользователь
+            <i nz-icon nzType="down"></i>
+          </a>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu nzSelectable>
+                        <li nz-menu-item>1st menu item</li>
+                        <li nz-menu-item>2nd menu item</li>
+                        <li nz-menu-item>3rd menu item</li>
+                    </ul>
+                </nz-dropdown-menu>
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+
+    <div nz-row>
+        <div nz-col nzSpan="8">
+
+
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your phone!">
+                    <nz-input-group>
+                        <input type="text" nz-input placeholder="плательщик" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col nzSpan="8" nzOffset="8">
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your MPN!">
+                    <nz-input-group>
+                        <input type="text" nz-input placeholder="MPN ID" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+
+    </div>
+
+
+    <!-- <button nz-button nzType="default " (click)="destroyModal() ">Custom Callback</button>
+    <button nz-button nzType="primary " (click)="destroyModal() ">Custom Submit</button> -->
+</form>

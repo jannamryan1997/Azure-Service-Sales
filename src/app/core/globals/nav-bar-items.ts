@@ -2,23 +2,24 @@ import { NavBarItem } from "../models/nav-bar-item";
 import { EUserRole } from "../models/users";
 
 export const NAVBAR_ITEMS: NavBarItem[] = [
+    // {
+    //     label: 'управление подписками',
+    //     routerLink: '/home',
+    //     roles: [
+    //         EUserRole.Administrator, EUserRole.Engineer,
+    //     ]
+    // },
+   
     {
-        label: 'управление подписками',
-        routerLink: '/home',
+        label: 'пользователи',
+        routerLink: '/users',
         roles: [
             EUserRole.Administrator, EUserRole.Engineer,
         ]
     },
     {
         label: 'подписки',
-        routerLink: '#',
-        roles: [
-            EUserRole.Administrator, EUserRole.Engineer,
-        ]
-    },
-    {
-        label: 'пользователи',
-        routerLink: '#',
+        routerLink: '/home',
         roles: [
             EUserRole.Administrator, EUserRole.Engineer,
         ]
@@ -26,13 +27,13 @@ export const NAVBAR_ITEMS: NavBarItem[] = [
 
     {
         label: 'отчеты',
-        routerLink: '#',
+        routerLink: '/reports',
         roles: [
             EUserRole.Administrator, EUserRole.Engineer,
         ]
     },
     {
-        label: 'управление инженерами',
+        label: 'Сотрудники',
         routerLink: '#',
         roles: [
             EUserRole.Administrator,

@@ -1,7 +1,15 @@
+ul {
+    background: #f0f2f5 !important;
+}
+
 li {
     text-transform: capitalize;
 }
 
 ::ng-deep .ant-layout-header {
     padding: 0 !important;
+}
+
+::ng-deep .ant-page-header-heading-title {
+    margin-left: 10px !important;
 }

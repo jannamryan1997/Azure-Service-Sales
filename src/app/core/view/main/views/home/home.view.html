@@ -1,1 +1,154 @@
-<p>home</p>
+<div class="home">
+    <header>
+        <p class="header-title">Управление подписками</p>
+        <div class="header-content">
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" nz-input placeholder="Поиск по подпискам" />
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+                <i nz-icon nzType="search"></i>
+            </ng-template>
+
+            <button nz-button nzType="primary" (click)="showModal()">Создать подписку</button>
+        </div>
+        <div style="display:flex;margin: 10px">
+            <p><b>Общий список:</b>15</p>
+            <p><b> Скрытые подписки:</b>15</p>
+
+        </div>
+
+    </header>
+    <main>
+        <div nz-row>
+            <div nz-col nzFlex="3" class="card-content">
+                <nz-card style="width:100%" class="card">
+                    <div style="display:flex;justify-content: space-between;">
+                        <div>
+                            <b>SUB-123456</b>
+                            <b>Microsoft 365 Office</b>
+                            <label nz-checkbox [(ngModel)]="checked">Скритая</label>
+                        </div>
+
+                        <button nz-button nzType="default">Активная</button>
+                    </div>
+
+                    <div style="display:flex"><b>1000</b>
+                        <p>рублей в месяц</p>
+                        <p>Дата окончания 15.02.2021</p>
+                        <label nz-checkbox [(ngModel)]="checked">Автопродление</label>
+                    </div>
+
+                    <div style="display:flex;justify-content: space-between;">
+                        <p>Пользователь:<b>ООО рога и копыта</b></p>
+                        <button nz-button nzType="default">Управление</button>
+                    </div>
+                </nz-card>
+                <nz-card style="width:100%" class="card">
+                    <div style="display:flex;justify-content: space-between;">
+                        <div>
+                            <b>SUB-123456</b>
+                            <b>Microsoft 365 Office</b>
+                            <label nz-checkbox [(ngModel)]="checked">Скритая</label>
+                        </div>
+
+                        <button nz-button nzType="default">Активная</button>
+                    </div>
+
+                    <div style="display:flex"><b>1000</b>
+                        <p>рублей в месяц</p>
+                        <p>Дата окончания 15.02.2021</p>
+                        <label nz-checkbox [(ngModel)]="checked">Автопродление</label>
+                    </div>
+
+                    <div style="display:flex;justify-content: space-between;">
+                        <p>Пользователь:<b>ООО рога и копыта</b></p>
+                        <button nz-button nzType="default">Управление</button>
+                    </div>
+                </nz-card>
+                <nz-card style="width:100%" class="card">
+                    <div style="display:flex;justify-content: space-between;">
+                        <div>
+                            <b>SUB-123456</b>
+                            <b>Microsoft 365 Office</b>
+                            <label nz-checkbox [(ngModel)]="checked">Скритая</label>
+                        </div>
+
+                        <button nz-button nzType="default">Активная</button>
+                    </div>
+
+                    <div style="display:flex"><b>1000</b>
+                        <p>рублей в месяц</p>
+                        <p>Дата окончания 15.02.2021</p>
+                        <label nz-checkbox [(ngModel)]="checked">Автопродление</label>
+                    </div>
+
+                    <div style="display:flex;justify-content: space-between;">
+                        <p>Пользователь:<b>ООО рога и копыта</b></p>
+                        <button nz-button nzType="default">Управление</button>
+                    </div>
+                </nz-card>
+            </div>
+            <div nz-col nzFlex="2">
+
+                <form nz-form class="form" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+                    <p>Фильтр</p>
+                    <nz-form-item>
+                        <a nz-dropdown [nzDropdownMenu]="menu">
+                                вендор
+                    <i nz-icon nzType="down"></i>
+                  </a>
+                        <nz-dropdown-menu #menu="nzDropdownMenu">
+                            <ul nz-menu nzSelectable>
+                                <li nz-menu-item>1st menu item</li>
+                                <li nz-menu-item>2nd menu item</li>
+                                <li nz-menu-item>3rd menu item</li>
+                            </ul>
+                        </nz-dropdown-menu>
+                    </nz-form-item>
+                    <nz-form-item>
+
+                        <a nz-dropdown [nzDropdownMenu]="menu">
+                            статус
+                    <i nz-icon nzType="down"></i>
+                  </a>
+                        <nz-dropdown-menu #menu="nzDropdownMenu">
+                            <ul nz-menu nzSelectable>
+                                <li nz-menu-item>1st menu item</li>
+                                <li nz-menu-item>2nd menu item</li>
+                                <li nz-menu-item>3rd menu item</li>
+                            </ul>
+                        </nz-dropdown-menu>
+                    </nz-form-item>
+
+                    <div nz-row class="date-picker">
+                        <div nz-col nzSpan="8">
+                            <nz-date-picker placeholder="с"></nz-date-picker>
+                        </div>
+                        <div nz-col nzSpan="8" nzOffset="8">
+                            <nz-date-picker placeholder="по"></nz-date-picker>
+                        </div>
+                    </div>
+
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your phone!">
+                            <nz-input-group>
+                                <a nz-dropdown [nzDropdownMenu]="menu">
+                                    заказчик
+                            <i nz-icon nzType="down"></i>
+                          </a>
+                                <nz-dropdown-menu #menu="nzDropdownMenu">
+                                    <ul nz-menu nzSelectable>
+                                        <li nz-menu-item>1st menu item</li>
+                                        <li nz-menu-item>2nd menu item</li>
+                                        <li nz-menu-item>3rd menu item</li>
+                                    </ul>
+                                </nz-dropdown-menu>
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <button nz-button nzType="primary" style="display: flex;margin: auto;">Применить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>

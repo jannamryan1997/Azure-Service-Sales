@@ -5,6 +5,14 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzListModule } from 'ng-zorro-antd/list';
 
 @NgModule({
     declarations: [],
@@ -13,7 +21,15 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
         NzIconModule,
         NzInputModule,
         NzCheckboxModule,
-        NzButtonModule
+        NzButtonModule,
+        NzModalModule,
+        NzDropDownModule,
+        NzCalendarModule,
+        NzGridModule,
+        NzDatePickerModule,
+        NzCardModule,
+        NzPageHeaderModule,
+        NzListModule
     ],
     entryComponents: [],
     providers: [],
@@ -22,7 +38,15 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
         NzIconModule,
         NzInputModule,
         NzCheckboxModule,
-        NzButtonModule
+        NzButtonModule,
+        NzModalModule,
+        NzDropDownModule,
+        NzCalendarModule,
+        NzGridModule,
+        NzDatePickerModule,
+        NzCardModule,
+        NzPageHeaderModule,
+        NzListModule
     ],
 })
 

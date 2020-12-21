@@ -1,0 +1,102 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <div nz-row>
+        <div nz-col nzSpan="10">
+            <nz-form-item>
+                <nz-form-control nzValidatingTip="Validating...">
+                    <input nz-input formControlName="name" placeholder="Название" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="loginUrl" placeholder="Login url" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="email" placeholder="email" type="email" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="country" placeholder="Страна" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="city" placeholder="Город" />
+                </nz-form-control>
+            </nz-form-item>
+
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="postcode" placeholder="Почтовый индекс" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="address" placeholder="Адрес" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control nzValidatingTip="Validating...">
+                    <input nz-input formControlName="INN" placeholder="ИНН" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col nzSpan="10" nzOffset="3">
+
+            <nz-form-item>
+                <nz-form-control nzValidatingTip="Validating...">
+                    <input nz-input formControlName="domain" placeholder="Тех.домен" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="login" placeholder="Логин" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="companyName" placeholder="Название компании" type="text" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="name2" placeholder="Имя" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="surname" placeholder="Фамилия" />
+                </nz-form-control>
+            </nz-form-item>
+
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="regionCode" placeholder="Код региона" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="phone" placeholder="Телефон" />
+                </nz-form-control>
+            </nz-form-item>
+            <label nz-checkbox formControlName="organization">Образовательная организация</label>
+        </div>
+    </div>
+    <!-- <nz-form-item>
+        <nz-form-control [nzOffset]="7" [nzSpan]="12">
+            <button nz-button nzType="primary">Отмена</button>
+            <button nz-button nzType="primary">Сохранить</button>
+        </nz-form-control>
+    </nz-form-item> -->
+</form>
