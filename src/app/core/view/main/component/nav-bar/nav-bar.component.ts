@@ -25,11 +25,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
         //  const userRole = this._userService.getUserSync()?.role;
         // this.navBarItem = sideBarItems.filter((element) => element.roles.includes(userRole));
         this.navBarItem = sideBarItems.filter((element) => element.roles);
-        console.log(this.navBarItem);
-        
     }
-
-  
 
     ngOnDestroy() {
         this._unsubscribe$.next();

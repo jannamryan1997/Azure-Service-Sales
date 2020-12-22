@@ -8,8 +8,9 @@ import { Subject } from 'rxjs';
 })
 
 export class ReportsViewComponent implements OnInit, OnDestroy {
-    
+
     private _unsubscribe$ = new Subject<void>();
+    public current = 1;
     constructor() { }
 
     ngOnInit() { }

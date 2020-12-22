@@ -13,3 +13,8 @@ li {
 ::ng-deep .ant-page-header-heading-title {
     margin-left: 10px !important;
 }
+
+.activeRouter {
+    color: #1890ff !important;
+    border-bottom: 2px solid #1890ff;
+}

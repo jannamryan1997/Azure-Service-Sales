@@ -33,6 +33,12 @@ const mainRoutes: Routes = [{
             },
         },
 
+        {
+            path: 'staff',
+            loadChildren: () => import('./views/staff/staff.module')
+                .then(m => m.StaffModule)
+        }
+
     ]
 }
 ]

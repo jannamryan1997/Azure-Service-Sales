@@ -1,0 +1,53 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <div nz-row>
+        <div nz-col nzSpan="10">
+            <nz-form-item>
+                <nz-form-control nzValidatingTip="Validating...">
+                    <input nz-input formControlName="name" placeholder="Название" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="surname" placeholder="Фамилия" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <a nz-dropdown [nzDropdownMenu]="menu">
+          Роль
+          <i nz-icon nzType="down"></i>
+        </a>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu nzSelectable>
+                        <li nz-menu-item>1st menu item</li>
+                        <li nz-menu-item>2nd menu item</li>
+                        <li nz-menu-item>3rd menu item</li>
+                    </ul>
+                </nz-dropdown-menu>
+            </nz-form-item>
+        </div>
+        <div nz-col nzSpan="10" nzOffset="3">
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="login" placeholder="Логин" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="email" placeholder="email" type="email" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <input nz-input formControlName="phone" placeholder="Телефон" />
+                </nz-form-control>
+            </nz-form-item>
+            <button nz-button nzType="default" class="password-btn">Збросить пароль</button>
+        </div>
+    </div>
+    <div class="nz-btn-content">
+        <button nz-button nzType="default" (click)="destroyModal()">Отмена</button>&nbsp;
+        <button nz-button nzType="primary">Сохранить</button>
+    </div>
+</form>

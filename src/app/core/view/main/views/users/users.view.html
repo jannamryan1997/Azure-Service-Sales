@@ -12,7 +12,10 @@
             <button nz-button nzType="primary" (click)="showModal()">Создать Пользователя</button>
         </div>
     </header>
-
+    <div class="paginate-content">
+        <nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" [nzSize]="'small'"></nz-pagination>
+        <p><b>10</b> 20 50</p>
+    </div>
     <nz-list nzBordered nzHeader="Список имен пользователей">
         <nz-list-item>
             <p>ООО рога и копыта</p>

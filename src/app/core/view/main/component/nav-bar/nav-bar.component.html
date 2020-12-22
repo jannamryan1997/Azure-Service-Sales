@@ -1,6 +1,6 @@
 <ul nz-menu nzMode="horizontal">
     <nz-page-header-title>Портал управления подписками</nz-page-header-title>
-    <li nz-menu-item *ngFor="let item of navBarItem;let ind=index" [routerLink]="item?.routerLink" routerLinkActive="nzSelected">
+    <li nz-menu-item *ngFor="let item of navBarItem;let ind=index" [routerLink]="item?.routerLink" routerLinkActive="activeRouter">
         {{item?.label}}</li>
     <li nz-menu-item routerLink="/auth">
         <i nz-icon nzType="logout" nzTheme="outline"></i> выход

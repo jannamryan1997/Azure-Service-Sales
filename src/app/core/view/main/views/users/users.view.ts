@@ -13,6 +13,7 @@ import { UserModal } from './modals';
 
 export class UsersViewComponent implements OnInit, OnDestroy {
     private _unsubscribe$ = new Subject<void>();
+    public current=1;
     constructor(private modalService: NzModalService) { }
 
     ngOnInit() { }

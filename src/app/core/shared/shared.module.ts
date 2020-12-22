@@ -13,6 +13,11 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzListModule } from 'ng-zorro-antd/list';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+
+//ngx
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
     declarations: [],
@@ -29,7 +34,11 @@ import { NzListModule } from 'ng-zorro-antd/list';
         NzDatePickerModule,
         NzCardModule,
         NzPageHeaderModule,
-        NzListModule
+        NzListModule,
+        NzTableModule,
+        NzPaginationModule,
+        SlickCarouselModule,
+   
     ],
     entryComponents: [],
     providers: [],
@@ -46,7 +55,10 @@ import { NzListModule } from 'ng-zorro-antd/list';
         NzDatePickerModule,
         NzCardModule,
         NzPageHeaderModule,
-        NzListModule
+        NzListModule,
+        NzTableModule,
+        NzPaginationModule,
+        SlickCarouselModule
     ],
 })
 

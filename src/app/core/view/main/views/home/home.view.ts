@@ -15,6 +15,7 @@ export class HomeViewComponent implements OnInit, OnDestroy {
     private _unsubscribe$ = new Subject<void>();
     public checked;
     public validateForm!: FormGroup;
+    public current = 1;
 
     constructor(private modalService: NzModalService,private _fb:FormBuilder) { }
 
@@ -37,7 +38,7 @@ export class HomeViewComponent implements OnInit, OnDestroy {
    public   showModal(): void {
         this.modalService.create({
           nzTitle: 'Управление подпиской',
-          nzContent: CreateSubscriptionModal
+          nzContent: CreateSubscriptionModal,
         });
       }
     

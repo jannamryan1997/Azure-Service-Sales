@@ -90,13 +90,11 @@
                     <input nz-input formControlName="phone" placeholder="Телефон" />
                 </nz-form-control>
             </nz-form-item>
-            <label nz-checkbox formControlName="organization">Образовательная организация</label>
+            <label nz-checkbox formControlName="organization">Образовательная учреждение</label>
         </div>
     </div>
-    <!-- <nz-form-item>
-        <nz-form-control [nzOffset]="7" [nzSpan]="12">
-            <button nz-button nzType="primary">Отмена</button>
-            <button nz-button nzType="primary">Сохранить</button>
-        </nz-form-control>
-    </nz-form-item> -->
+    <div class="nz-btn-content">
+        <button nz-button nzType="default" (click)="destroyModal()">Отмена</button>&nbsp;
+        <button nz-button nzType="primary">Сохранить</button>
+    </div>
 </form>

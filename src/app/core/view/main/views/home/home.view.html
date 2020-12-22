@@ -11,7 +11,7 @@
 
             <button nz-button nzType="primary" (click)="showModal()">Создать подписку</button>
         </div>
-        <div style="display:flex;margin: 10px">
+        <div style="display:flex;margin: 20px 0">
             <p><b>Общий список:</b>15</p>
             <p><b> Скрытые подписки:</b>15</p>
 
@@ -19,14 +19,21 @@
 
     </header>
     <main>
+
         <div nz-row>
             <div nz-col nzFlex="3" class="card-content">
+                <div class="paginate-content">
+                    <nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" [nzSize]="'small'"></nz-pagination>
+                    <p><i nz-icon nzType="sort-ascending" nzTheme="outline"></i>сортировка:<b>по дате</b></p>
+                    <p><b>10</b> 20 50</p>
+                </div>
                 <nz-card style="width:100%" class="card">
                     <div style="display:flex;justify-content: space-between;">
                         <div>
+                            <label nz-checkbox>Скритая</label>
                             <b>SUB-123456</b>
                             <b>Microsoft 365 Office</b>
-                            <label nz-checkbox [(ngModel)]="checked">Скритая</label>
+
                         </div>
 
                         <button nz-button nzType="default">Активная</button>
@@ -35,20 +42,21 @@
                     <div style="display:flex"><b>1000</b>
                         <p>рублей в месяц</p>
                         <p>Дата окончания 15.02.2021</p>
-                        <label nz-checkbox [(ngModel)]="checked">Автопродление</label>
+                        <label nz-checkbox>Автопродление</label>
                     </div>
 
                     <div style="display:flex;justify-content: space-between;">
                         <p>Пользователь:<b>ООО рога и копыта</b></p>
-                        <button nz-button nzType="default">Управление</button>
+                        <button nz-button nzType="default" (click)="showModal()">Управление</button>
                     </div>
                 </nz-card>
                 <nz-card style="width:100%" class="card">
                     <div style="display:flex;justify-content: space-between;">
                         <div>
+                            <label nz-checkbox>Скритая</label>
                             <b>SUB-123456</b>
                             <b>Microsoft 365 Office</b>
-                            <label nz-checkbox [(ngModel)]="checked">Скритая</label>
+
                         </div>
 
                         <button nz-button nzType="default">Активная</button>
@@ -57,20 +65,21 @@
                     <div style="display:flex"><b>1000</b>
                         <p>рублей в месяц</p>
                         <p>Дата окончания 15.02.2021</p>
-                        <label nz-checkbox [(ngModel)]="checked">Автопродление</label>
+                        <label nz-checkbox>Автопродление</label>
                     </div>
 
                     <div style="display:flex;justify-content: space-between;">
                         <p>Пользователь:<b>ООО рога и копыта</b></p>
-                        <button nz-button nzType="default">Управление</button>
+                        <button nz-button nzType="default" (click)="showModal()">Управление</button>
                     </div>
                 </nz-card>
                 <nz-card style="width:100%" class="card">
                     <div style="display:flex;justify-content: space-between;">
                         <div>
+                            <label nz-checkbox>Скритая</label>
                             <b>SUB-123456</b>
                             <b>Microsoft 365 Office</b>
-                            <label nz-checkbox [(ngModel)]="checked">Скритая</label>
+
                         </div>
 
                         <button nz-button nzType="default">Активная</button>
@@ -79,12 +88,12 @@
                     <div style="display:flex"><b>1000</b>
                         <p>рублей в месяц</p>
                         <p>Дата окончания 15.02.2021</p>
-                        <label nz-checkbox [(ngModel)]="checked">Автопродление</label>
+                        <label nz-checkbox>Автопродление</label>
                     </div>
 
                     <div style="display:flex;justify-content: space-between;">
                         <p>Пользователь:<b>ООО рога и копыта</b></p>
-                        <button nz-button nzType="default">Управление</button>
+                        <button nz-button nzType="default" (click)="showModal()">Управление</button>
                     </div>
                 </nz-card>
             </div>
@@ -93,11 +102,11 @@
                 <form nz-form class="form" [formGroup]="validateForm" (ngSubmit)="submitForm()">
                     <p>Фильтр</p>
                     <nz-form-item>
-                        <a nz-dropdown [nzDropdownMenu]="menu">
+                        <a nz-dropdown [nzDropdownMenu]="menu1">
                                 вендор
                     <i nz-icon nzType="down"></i>
                   </a>
-                        <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <nz-dropdown-menu #menu1="nzDropdownMenu">
                             <ul nz-menu nzSelectable>
                                 <li nz-menu-item>1st menu item</li>
                                 <li nz-menu-item>2nd menu item</li>
@@ -107,11 +116,11 @@
                     </nz-form-item>
                     <nz-form-item>
 
-                        <a nz-dropdown [nzDropdownMenu]="menu">
+                        <a nz-dropdown [nzDropdownMenu]="menu2">
                             статус
                     <i nz-icon nzType="down"></i>
                   </a>
-                        <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <nz-dropdown-menu #menu2="nzDropdownMenu">
                             <ul nz-menu nzSelectable>
                                 <li nz-menu-item>1st menu item</li>
                                 <li nz-menu-item>2nd menu item</li>
@@ -132,11 +141,11 @@
                     <nz-form-item>
                         <nz-form-control nzErrorTip="Please input your phone!">
                             <nz-input-group>
-                                <a nz-dropdown [nzDropdownMenu]="menu">
+                                <a nz-dropdown [nzDropdownMenu]="menu3">
                                     заказчик
                             <i nz-icon nzType="down"></i>
                           </a>
-                                <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <nz-dropdown-menu #menu3="nzDropdownMenu">
                                     <ul nz-menu nzSelectable>
                                         <li nz-menu-item>1st menu item</li>
                                         <li nz-menu-item>2nd menu item</li>

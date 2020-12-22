@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 import { Subject } from 'rxjs';
@@ -14,7 +15,7 @@ export class LoginViewComponent implements OnInit, OnDestroy {
 
     private _unsubscribe$ = new Subject<void>();
     public validateForm!: FormGroup;
-    constructor(private _fb:FormBuilder) { }
+    constructor(private _fb:FormBuilder,private _router:Router) { }
 
     ngOnInit() {
         this._formBuilder();
@@ -32,6 +33,10 @@ export class LoginViewComponent implements OnInit, OnDestroy {
             password: [null, [Validators.required]],
             remember: [true]
           });
+    }
+
+    public LogIn():void{
+this._router.navigate(['/home']);
     }
     ngOnDestroy() {
         this._unsubscribe$.next();

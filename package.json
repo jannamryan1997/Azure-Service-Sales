@@ -22,8 +22,11 @@
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@ant-design/icons": "^4.3.0",
+    "jquery": "^3.5.1",
     "ng-zorro-antd": "^10.2.2",
+    "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.6.0",
+    "slick-carousel": "^1.8.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

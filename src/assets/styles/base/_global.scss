@@ -28,5 +28,21 @@
 }
 
 .ant-input-affix-wrapper {
+    width: 40%;
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+.nz-btn-content {
+    margin: 10px auto;
     width: 50%;
+}
+
+.paginate-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
 }

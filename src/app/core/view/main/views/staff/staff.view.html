@@ -1,0 +1,37 @@
+<div class="staff">
+    <header>
+        <p class="header-title">Управление сотрудниками</p>
+        <div class="header-content">
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" nz-input placeholder="Поиск по сотрудникам" />
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+                <i nz-icon nzType="search"></i>
+            </ng-template>
+
+            <button nz-button nzType="primary" (click)="showModal()">Создать сотрудника</button>
+        </div>
+    </header>
+    <div class="paginate-content">
+        <nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" [nzSize]="'small'"></nz-pagination>
+        <p><b>10</b> 20 50</p>
+    </div>
+    <nz-table #basicTable>
+        <thead>
+            <tr>
+                <th>Сотрудник</th>
+                <th>Роль</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Иванов И.Н.</td>
+                <td>администратор</td>
+            </tr>
+            <tr>
+                <td>Иванов И.Н.</td>
+                <td>инженер</td>
+            </tr>
+        </tbody>
+    </nz-table>
+</div>

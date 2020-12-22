@@ -2,6 +2,10 @@
     <header>
         <p class="header-title">Отчеты</p>
     </header>
+    <div class="paginate-content">
+        <nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" [nzSize]="'small'"></nz-pagination>
+        <p><b>10</b> 20 50</p>
+    </div>
     <div style="padding:10px;">
         <nz-card class="nz-card" [nzBordered]="false" nzTitle="Месяц-Год">
             <p>Атчёт по использованию Azue.cvs</p>

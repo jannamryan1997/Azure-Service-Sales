@@ -1,0 +1,18 @@
+nz-table {
+    margin: 30px 0;
+}
+
+::ng-deep .nz-disable-td {
+    display: none;
+}
+
+tr {
+    th {
+        font-weight: 600;
+    }
+}
+
+.paginate-content {
+    width: 50%;
+    margin: 20px 0 0 0;
+}
