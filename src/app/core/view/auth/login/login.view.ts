@@ -36,7 +36,13 @@ export class LoginViewComponent implements OnInit, OnDestroy {
     }
 
     public LogIn():void{
-this._router.navigate(['/home']);
+        if(this.validateForm.invalid){
+            this.validateForm.markAllAsTouched();
+        }
+        else{
+            this._router.navigate(['/home']);
+        }
+
     }
     ngOnDestroy() {
         this._unsubscribe$.next();
